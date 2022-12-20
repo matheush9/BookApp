@@ -1,4 +1,8 @@
-﻿namespace BookApp.Models
+﻿using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+
+namespace BookApp.Models
 {
     public class Book
     {
@@ -7,7 +11,10 @@
         public string Description { get; set; }
         public string Author { get; set; }
         public string? Publisher { get; set; }
-        public DateOnly PublicationDate { get; set; }
+
+        [DataType(DataType.Date)]
+        [Column(TypeName = "Date")]
+        public DateTime? PublicationDate { get; set; }
         public string Language { get; set; }
         public int TotalPages { get; set; }
 

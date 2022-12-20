@@ -59,11 +59,11 @@ namespace BookApp.Controllers
             }
 
             book.Author = request.Author;
-            book.PublicationDate = request.PublicationDate;
             book.Description = request.Description;
             book.Language = request.Language;
             book.Title = request.Title;
             book.TotalPages = request.TotalPages;
+            book.PublicationDate = request.PublicationDate;
             book.Publisher = request.Publisher;
 
             return Ok(book);

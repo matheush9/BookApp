@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BookApp.Migrations
 {
     [DbContext(typeof(BookContext))]
-    [Migration("20221218132633_Initial Migration")]
+    [Migration("20221220004646_Initial Migration")]
     partial class InitialMigration
     {
         /// <inheritdoc />
@@ -45,8 +45,8 @@ namespace BookApp.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("PublicationDate")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("PublicationDate")
+                        .HasColumnType("Date");
 
                     b.Property<string>("Publisher")
                         .HasColumnType("nvarchar(max)");

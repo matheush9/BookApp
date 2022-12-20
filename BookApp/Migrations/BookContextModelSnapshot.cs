@@ -42,8 +42,8 @@ namespace BookApp.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("PublicationDate")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime?>("PublicationDate")
+                        .HasColumnType("Date");
 
                     b.Property<string>("Publisher")
                         .HasColumnType("nvarchar(max)");

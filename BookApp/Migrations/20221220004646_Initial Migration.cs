@@ -21,7 +21,7 @@ namespace BookApp.Migrations
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Author = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Publisher = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    PublicationDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    PublicationDate = table.Column<DateTime>(type: "Date", nullable: true),
                     Language = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TotalPages = table.Column<int>(type: "int", nullable: false)
                 },
