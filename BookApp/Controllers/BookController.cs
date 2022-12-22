@@ -41,6 +41,7 @@ namespace BookApp.Controllers
         [HttpPost]
         public async Task<IActionResult> AddBook([FromBody] Book bookRequest)
         {
+
             await _bookContext.Books.AddAsync(bookRequest);
             await _bookContext.SaveChangesAsync();
 
@@ -66,6 +67,8 @@ namespace BookApp.Controllers
             book.PublicationDate = request.PublicationDate;
             book.Publisher = request.Publisher;
 
+            await _bookContext.SaveChangesAsync();
+
             return Ok(book);
         }
 
@@ -83,7 +86,7 @@ namespace BookApp.Controllers
 
             var books = await _bookContext.Books.ToListAsync();
 
-            return Ok(books);
+            return Ok();
         }
 
     }
