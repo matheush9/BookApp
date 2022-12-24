@@ -1,0 +1,35 @@
+h1 {
+  margin: 0;
+}
+
+.book-img {
+  height: 13rem;
+  width: 80%;
+}
+
+.book-title {
+  font-size: 1.2rem;
+}
+
+.book-card {
+  width: 15rem;
+  margin: 2rem;
+}
+
+.book {
+  margin-left: 5px;
+}
+
+.books-container {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 5rem 5rem;
+  background-color: rgb(235, 221, 192);
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
