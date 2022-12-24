@@ -1,0 +1,40 @@
+<div class="container my-5">
+  <h1 class="mb-3">Edit book</h1>
+
+  <div class="row">
+    <div class="col-6">
+      <form #form="ngForm" (ngSubmit)="updateBook()">
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" class="form-control" id="title" required name="title" [(ngModel)]="bookDetails.title" placeholder="Enter your book title" />
+        </div>
+        <div class="mb-3">
+          <label for="author" class="form-label">Author</label>
+          <input type="text" class="form-control" id="author" name="author" [(ngModel)]="bookDetails.author" placeholder="Enter your book author" />
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <input type="text" class="form-control" id="description" name="description" [(ngModel)]="bookDetails.description" placeholder="Enter your book description" />
+        </div>
+        <div class="mb-3">
+          <label for="publisher" class="form-label">Publisher</label>
+          <input type="text" class="form-control" id="publisher" name="publisher" [(ngModel)]="bookDetails.publisher" placeholder="Enter your book publisher" />
+        </div>
+        <div class="mb-3">
+          <label for="publicationDate" class="form-label">Publication date</label>
+          <input type="date" class="form-control" id="publicationDate" name="publicationDate" [(ngModel)]="bookDetails.publicationDate" placeholder="Enter your book description" />
+        </div>
+        <div class="mb-3">
+          <label for="language" class="form-label">Language</label>
+          <input type="text" class="form-control" id="language" name="language" [(ngModel)]="bookDetails.language" placeholder="Enter your book language" />
+        </div>
+        <div class="mb-3">
+          <label for="totalPages" class="form-label">Total pages</label>
+          <input type="text" class="form-control" id="totalPages" name="totalPages" [(ngModel)]="bookDetails.totalPages" placeholder="Enter your book Total pages" />
+        </div>
+        <button type="submit" class="btn btn-primary" style="margin-right: 1rem;">Save</button>
+        <button type="button" class="btn btn-danger" (click)="deleteBook(bookDetails.id)">Delete book</button>
+      </form>
+    </div>
+  </div>
+</div>

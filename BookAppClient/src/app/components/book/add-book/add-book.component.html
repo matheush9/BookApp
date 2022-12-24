@@ -1,0 +1,42 @@
+<div class="container my-5">
+  <h1 class="mb-3">Add new book</h1>
+
+  <div class="row">
+    <div class="col-6">
+      <form class="needs-validation" #form="ngForm" (ngSubmit) = "addBook()">
+        <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" class="form-control" id="title" name="title" [(ngModel)]="addBookRequest.title" placeholder="Enter your book title"  required />
+          <div class="invalid-feedback">
+            Please choose a username.
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="author" class="form-label">Author</label>
+          <input type="text" class="form-control" id="author" name="author" [(ngModel)]="addBookRequest.author" placeholder="Enter your book author" />
+        </div>
+        <div class="mb-3">
+          <label for="description" class="form-label">Description</label>
+          <input type="text" class="form-control" id="description" name="description" [(ngModel)]="addBookRequest.description" placeholder="Enter your book description" />
+        </div>
+        <div class="mb-3">
+          <label for="publisher" class="form-label">Publisher</label>
+          <input type="text" class="form-control" id="publisher" name="publisher" [(ngModel)]="addBookRequest.publisher" placeholder="Enter your book publisher" />
+        </div>
+        <div class="mb-3">
+          <label for="publicationDate" class="form-label">Publication Date</label>
+          <input type="date" class="form-control" id="publicationDate" name="publicationDate" [(ngModel)]="addBookRequest.publicationDate" placeholder="Enter your book publisher" />
+        </div>
+        <div class="mb-3">
+          <label for="language" class="form-label">Language</label>
+          <input type="text" class="form-control" id="language" name="language" [(ngModel)]="addBookRequest.language" placeholder="Enter your book language" />
+        </div>
+        <div class="mb-3">
+          <label for="totalPages" class="form-label">Total pages</label>
+          <input type="text" class="form-control" id="totalPages" name="totalPages" [(ngModel)]="addBookRequest.totalPages" placeholder="Enter your book Total pages" />
+        </div>
+        <button type="submit" class="btn btn-primary">Save</button>
+      </form>
+    </div>
+  </div>
+</div>
