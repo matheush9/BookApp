@@ -14,7 +14,7 @@ export class AddBookComponent implements OnInit {
     author: '',
     description: '',
     language: '',
-    publicationDate: new Date,
+    publicationDate: new Date(),
     title: '',
     totalPages: 0,
     publisher: ''

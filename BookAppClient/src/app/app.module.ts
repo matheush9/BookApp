@@ -8,11 +8,14 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from  '@angular/common/http';
 
 import {MatCardModule} from '@angular/material/card';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 
 import { BookListComponent } from './components/book/book-list/book-list.component';
 import { AddBookComponent } from './components/book/add-book/add-book.component';
 import { FormsModule } from '@angular/forms';
 import { EditBookComponent } from './components/book/edit-book/edit-book.component';
+
 
 @NgModule({
   declarations: [
@@ -27,7 +30,10 @@ import { EditBookComponent } from './components/book/edit-book/edit-book.compone
     NoopAnimationsModule,
     MatCardModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent],

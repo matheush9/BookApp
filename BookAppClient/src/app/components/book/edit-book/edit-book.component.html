@@ -21,8 +21,12 @@
           <input type="text" class="form-control" id="publisher" name="publisher" [(ngModel)]="bookDetails.publisher" placeholder="Enter your book publisher" />
         </div>
         <div class="mb-3">
-          <label for="publicationDate" class="form-label">Publication date</label>
-          <input type="date" class="form-control" id="publicationDate" name="publicationDate" [(ngModel)]="bookDetails.publicationDate" placeholder="Enter your book description" />
+          <label for="publicationDate" style="display: block;" class="form-label">Publication date</label>
+          <input id="publicationDate" class="input-control" name="publicationDate" 
+          [(ngModel)]="bookDetails.publicationDate"
+           matInput [matDatepicker]="picker">
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
         </div>
         <div class="mb-3">
           <label for="language" class="form-label">Language</label>
