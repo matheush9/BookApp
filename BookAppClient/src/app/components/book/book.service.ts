@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { HttpClient } from "@angular/common/http";
 import { Book } from "./book-model";
+import { environment } from 'src/environment/environment';
 
 
 
@@ -9,9 +10,11 @@ import { Book } from "./book-model";
   providedIn: 'root'
 })
 export class BookService {
-  baseApiUrl: string = "https://localhost:7169";
+  private baseApiUrl: string | undefined;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.baseApiUrl = environment.baseApiUrl
+   }
   
   getAllBooks(): Observable<Book[]> {  
     return this.http.get<Book[]>(this.baseApiUrl + '/api/book');
